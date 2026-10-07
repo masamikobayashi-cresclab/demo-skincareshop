@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>肌日和 HADABIYORI | スキンケア</title>
+<meta name="description" content="肌日和 HADABIYORI — 保湿ラインと皮脂コントロールラインの2つのスキンケアシリーズ">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#faf6ef;
+    --cream-deep:#f2ead9;
+    --sage:#8ba583;
+    --sage-deep:#5f7a58;
+    --clay:#a98a74;
+    --clay-deep:#6e5848;
+    --ink:#2e2b27;
+    --ink-soft:#6b655c;
+    --line:#e5ddcc;
+    --white:#ffffff;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:"Noto Sans JP", sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(250,246,239,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav{
+    max-width:1120px;
+    margin:0 auto;
+    padding:18px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .brand{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+  .brand .ja{
+    font-family:"Shippori Mincho", serif;
+    font-size:22px;
+    letter-spacing:0.08em;
+    color:var(--ink);
+  }
+  .brand .en{
+    font-size:10px;
+    letter-spacing:0.28em;
+    color:var(--ink-soft);
+    margin-top:3px;
+  }
+  .nav-links{
+    display:flex;
+    gap:32px;
+    font-size:13px;
+    letter-spacing:0.05em;
+    color:var(--ink-soft);
+  }
+  .nav-links a{transition:color .2s;}
+  .nav-links a:hover{color:var(--sage-deep);}
+  .nav-icons{display:flex;gap:16px;align-items:center;}
+  .icon-btn{
+    width:36px;height:36px;border-radius:50%;
+    border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;
+    font-size:14px;color:var(--ink-soft);
+    background:var(--white);
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    max-width:1120px;
+    margin:0 auto;
+    padding:72px 24px 88px;
+    display:grid;
+    grid-template-columns:1.1fr 0.9fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero-copy .eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:12px;
+    letter-spacing:0.22em;
+    color:var(--sage-deep);
+    margin-bottom:20px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:28px;height:1px;background:var(--sage-deep);
+  }
+  .hero-copy h1{
+    font-family:"Shippori Mincho", serif;
+    font-weight:500;
+    font-size:clamp(32px,4.2vw,52px);
+    line-height:1.45;
+    margin:0 0 24px;
+    color:var(--ink);
+  }
+  .hero-copy p{
+    font-size:14.5px;
+    line-height:2;
+    color:var(--ink-soft);
+    max-width:440px;
+    margin:0 0 32px;
+  }
+  .hero-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 30px;
+    background:var(--ink);
+    color:var(--cream);
+    border-radius:999px;
+    font-size:13px;
+    letter-spacing:0.1em;
+  }
+  .hero-visual{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .hero-visual .ring{
+    position:absolute;
+    width:340px;height:340px;
+    border-radius:50%;
+    background:radial-gradient(circle at 35% 30%, var(--cream-deep), var(--sage) 140%);
+    opacity:0.55;
+    filter:blur(2px);
+  }
+  .hero-visual img{
+    position:relative;
+    width:230px;
+    filter:drop-shadow(0 30px 40px rgba(60,50,30,0.18));
+  }
+
+  /* ---------- Section headings ---------- */
+  .section{
+    max-width:1120px;
+    margin:0 auto;
+    padding:40px 24px 10px;
+  }
+  .section-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    margin-bottom:40px;
+    flex-wrap:wrap;
+    gap:16px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:24px;
+  }
+  .section-head .eyebrow{
+    font-size:12px;
+    letter-spacing:0.22em;
+    color:var(--sage-deep);
+    display:block;
+    margin-bottom:10px;
+  }
+  .section-head h2{
+    font-family:"Shippori Mincho", serif;
+    font-weight:500;
+    font-size:28px;
+    margin:0;
+  }
+  .section-head p{
+    font-size:13px;
+    color:var(--ink-soft);
+    max-width:360px;
+    line-height:1.8;
+    margin:0;
+  }
+
+  /* ---------- Product grid ---------- */
+  .products{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 24px 100px;
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:28px;
+  }
+  .card{
+    background:var(--white);
+    border:1px solid var(--line);
+    border-radius:18px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .35s ease, box-shadow .35s ease;
+  }
+  .card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 24px 40px -18px rgba(70,60,40,0.22);
+  }
+  .card-media{
+    position:relative;
+    aspect-ratio:1/1;
+    background:linear-gradient(160deg, var(--cream-deep), var(--white) 70%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:26px;
+  }
+  .card-media img{
+    width:72%;
+    filter:drop-shadow(0 18px 20px rgba(60,50,30,0.15));
+  }
+  .tag{
+    position:absolute;
+    top:14px;
+    left:14px;
+    font-size:10px;
+    letter-spacing:0.08em;
+    padding:5px 10px;
+    border-radius:999px;
+    background:var(--white);
+    color:var(--ink-soft);
+    border:1px solid var(--line);
+  }
+  .tag.sage{color:var(--sage-deep);}
+  .tag.clay{color:var(--clay-deep);}
+
+  .card-body{
+    padding:20px 20px 22px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    flex:1;
+  }
+  .card-body .line-name{
+    font-size:10.5px;
+    letter-spacing:0.14em;
+    color:var(--ink-soft);
+  }
+  .card-body h3{
+    font-family:"Shippori Mincho", serif;
+    font-size:18px;
+    font-weight:500;
+    margin:0;
+    line-height:1.5;
+  }
+  .card-body .desc{
+    font-size:12px;
+    line-height:1.85;
+    color:var(--ink-soft);
+    flex:1;
+  }
+  .card-footer{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:6px;
+  }
+  .price{
+    font-size:16px;
+    font-weight:600;
+    color:var(--ink);
+  }
+  .price .tax{
+    font-size:10px;
+    font-weight:400;
+    color:var(--ink-soft);
+    margin-left:4px;
+  }
+
+  /* Buy button rendered as a decorative image (mockup only / 非機能) */
+  .buy-btn{
+    height:40px;
+    display:flex;
+    align-items:center;
+    cursor:default;
+  }
+  .buy-btn img{height:100%;width:auto;}
+
+  /* ---------- Lines banner ---------- */
+  .lines{
+    max-width:1120px;
+    margin:60px auto 0;
+    padding:0 24px 100px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+  }
+  .line-card{
+    border-radius:20px;
+    padding:36px;
+    position:relative;
+    overflow:hidden;
+    min-height:170px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .line-card.sage-bg{
+    background:linear-gradient(135deg,#eef2e9,#dde6d5);
+  }
+  .line-card.clay-bg{
+    background:linear-gradient(135deg,#f1e9e1,#e4d6c7);
+  }
+  .line-card .en{
+    font-size:11px;
+    letter-spacing:0.2em;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+  }
+  .line-card h3{
+    font-family:"Shippori Mincho", serif;
+    font-size:24px;
+    margin:0 0 10px;
+  }
+  .line-card p{
+    font-size:12.5px;
+    line-height:1.9;
+    color:var(--ink-soft);
+    max-width:320px;
+    margin:0;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    border-top:1px solid var(--line);
+    background:var(--cream-deep);
+  }
+  .foot-inner{
+    max-width:1120px;
+    margin:0 auto;
+    padding:56px 24px 32px;
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:40px;
+  }
+  .foot-inner .brand .ja{font-size:19px;}
+  .foot-inner p{
+    font-size:12.5px;
+    line-height:1.9;
+    color:var(--ink-soft);
+    max-width:280px;
+  }
+  .foot-col h4{
+    font-size:12px;
+    letter-spacing:0.1em;
+    margin:0 0 16px;
+    color:var(--ink);
+  }
+  .foot-col ul{
+    list-style:none;
+    margin:0;padding:0;
+    display:flex;flex-direction:column;gap:10px;
+    font-size:12.5px;
+    color:var(--ink-soft);
+  }
+  .copyright{
+    text-align:center;
+    font-size:11px;
+    color:var(--ink-soft);
+    padding:20px 24px 28px;
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;padding-top:48px;}
+    .hero-visual{order:-1;}
+    .hero-visual .ring{width:240px;height:240px;}
+    .hero-visual img{width:170px;}
+    .products{grid-template-columns:repeat(2, 1fr);}
+    .lines{grid-template-columns:1fr;}
+    .foot-inner{grid-template-columns:1fr;gap:28px;}
+    .nav-links{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <span class="ja">肌日和</span>
+      <span class="en">HADABIYORI</span>
+    </a>
+    <nav class="nav-links">
+      <a href="#products">PRODUCTS</a>
+      <a href="#lines">CONCEPT</a>
+      <a href="#about">ABOUT</a>
+    </nav>
+    <div class="nav-icons">
+      <span class="icon-btn">🔍</span>
+      <span class="icon-btn">🛍</span>
+    </div>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-copy">
+    <span class="eyebrow">DAILY SKINCARE RITUAL</span>
+    <h1>その日の肌に、<br>いちばん合う一本を。</h1>
+    <p>
+      肌日和（HADABIYORI）は、「保湿」と「皮脂コントロール」ふたつのラインから、
+      季節や肌の調子に合わせて選べるスキンケアシリーズです。
+      やさしい使い心地と、続けたくなるシンプルな処方にこだわりました。
+    </p>
+    <a class="hero-btn" href="#products">商品をみる &nbsp;→</a>
+  </div>
+  <div class="hero-visual">
+    <div class="ring"></div>
+    <img src="images/moist-lotion.png" alt="保湿ローション">
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="section-head">
+    <div>
+      <span class="eyebrow">ALL ITEMS</span>
+      <h2>Products</h2>
+    </div>
+    <p>4つのアイテムは単体でも、ラインで揃えてもお使いいただけます。まずはお肌の状態に合わせて選んでみてください。</p>
+  </div>
+</section>
+
+<div class="products">
+
+  <article class="card">
+    <div class="card-media">
+      <span class="tag sage">保湿ライン</span>
+      <img src="images/moist-lotion.png" alt="保湿ローション">
+    </div>
+    <div class="card-body">
+      <span class="line-name">MOISTURE LINE</span>
+      <h3>保湿ローション</h3>
+      <p class="desc">とろみのあるテクスチャーがすっと肌になじみ、乾燥しがちな肌に水分をたっぷり届けます。</p>
+      <div class="card-footer">
+        <span class="price">¥3,200<span class="tax">(税込)</span></span>
+        <a class="buy-btn" href="#" aria-label="カートに入れる（デモ）">
+          <img src="images/btn-cart-sage.svg" alt="カートに入れる">
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-media">
+      <span class="tag sage">保湿ライン</span>
+      <img src="images/moist-cream.png" alt="保湿クリーム">
+    </div>
+    <div class="card-body">
+      <span class="line-name">MOISTURE LINE</span>
+      <h3>保湿クリーム</h3>
+      <p class="desc">濃密なクリームが乾燥から肌を守り、もっちりとしたうるおいのヴェールで包み込みます。</p>
+      <div class="card-footer">
+        <span class="price">¥4,500<span class="tax">(税込)</span></span>
+        <a class="buy-btn" href="#" aria-label="カートに入れる（デモ）">
+          <img src="images/btn-cart-sage.svg" alt="カートに入れる">
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-media">
+      <span class="tag clay">皮脂コントロールライン</span>
+      <img src="images/sebum-lotion.png" alt="皮脂コントロールローション">
+    </div>
+    <div class="card-body">
+      <span class="line-name">SEBUM CONTROL LINE</span>
+      <h3>皮脂コントロールローション</h3>
+      <p class="desc">さらりとした使用感で、うるおいを残しながら気になるテカリ・ベタつきを整えます。</p>
+      <div class="card-footer">
+        <span class="price">¥3,400<span class="tax">(税込)</span></span>
+        <a class="buy-btn" href="#" aria-label="カートに入れる（デモ）">
+          <img src="images/btn-cart-clay.svg" alt="カートに入れる">
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <article class="card">
+    <div class="card-media">
+      <span class="tag clay">皮脂コントロールライン</span>
+      <img src="images/sebum-powder.png" alt="皮脂コントロールパウダー">
+    </div>
+    <div class="card-body">
+      <span class="line-name">SEBUM CONTROL LINE</span>
+      <h3>皮脂コントロールパウダー</h3>
+      <p class="desc">微細パウダーが余分な皮脂をさらっとオフ。メイクの上からでも使える仕上げ用アイテム。</p>
+      <div class="card-footer">
+        <span class="price">¥2,800<span class="tax">(税込)</span></span>
+        <a class="buy-btn" href="#" aria-label="カートに入れる（デモ）">
+          <img src="images/btn-cart-clay.svg" alt="カートに入れる">
+        </a>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+<section class="section" id="lines" style="padding-bottom:0;">
+  <div class="section-head" style="border-bottom:none;padding-bottom:0;margin-bottom:0;">
+    <div>
+      <span class="eyebrow">CONCEPT</span>
+      <h2>2つのライン</h2>
+    </div>
+  </div>
+</section>
+
+<div class="lines">
+  <div class="line-card sage-bg">
+    <span class="en">MOISTURE LINE</span>
+    <h3>保湿ライン</h3>
+    <p>乾燥・ゆらぎが気になる季節に。水分を抱え込む処方で、一日中うるおいが続く肌へ。</p>
+  </div>
+  <div class="line-card clay-bg">
+    <span class="en">SEBUM CONTROL LINE</span>
+    <h3>皮脂コントロールライン</h3>
+    <p>テカリ・毛穴が気になる肌に。うるおいは残しながら、崩れにくいさらさら肌へ整えます。</p>
+  </div>
+</div>
+
+<footer id="about">
+  <div class="foot-inner">
+    <div>
+      <a class="brand" href="#top">
+        <span class="ja">肌日和</span>
+        <span class="en">HADABIYORI</span>
+      </a>
+      <p style="margin-top:18px;">
+        このサイトはデザイン確認用のダミー（モック）ページです。
+        掲載商品・価格・カートボタンはすべて架空のサンプルで、実際の購入機能はありません。
+      </p>
+    </div>
+    <div class="foot-col">
+      <h4>PRODUCTS</h4>
+      <ul>
+        <li>保湿ローション</li>
+        <li>保湿クリーム</li>
+        <li>皮脂コントロールローション</li>
+        <li>皮脂コントロールパウダー</li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>INFORMATION</h4>
+      <ul>
+        <li>ブランドについて</li>
+        <li>よくあるご質問</li>
+        <li>お問い合わせ（ダミー）</li>
+      </ul>
+    </div>
+  </div>
+  <div class="copyright">© 2026 HADABIYORI — Demo site for design purposes only.</div>
+</footer>
+
+</body>
+</html>
